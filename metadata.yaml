@@ -1,0 +1,35 @@
+_repo: Little-Women_514
+creator:
+  author:
+    agent_name: Alcott, Louisa May
+    aliases:
+    - Barnard, A. M.
+    - Alcott, Louisa M. (Louisa May)
+    - Alcott, L. M. (Louisa May)
+    birthdate: 1832
+    deathdate: 1888
+    gutenberg_agent_id: '102'
+    url: http://www.gutenberg.org/2009/agents/102
+    wikipedia: http://en.wikipedia.org/wiki/Louisa_May_Alcott
+gutenberg_bookshelf: Children's Literature
+gutenberg_issued: '1996-05-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '514'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- '!lcsh:Domestic fiction'
+- '!lcsh:Sisters -- Fiction'
+- '!lcsh:Young women -- Fiction'
+- '!lcsh:New England -- Fiction'
+- '!lcc:PS'
+- '!lcsh:Bildungsromans'
+- '!lcsh:Mothers and daughters -- Fiction'
+- '!lcsh:Family life -- New England -- Fiction'
+- '!lcsh:March family (Fictitious characters) -- Fiction'
+- '!lcsh:Autobiographical fiction'
+title: Little Women
+url: http://www.gutenberg.org/ebooks/514
