@@ -3,8 +3,8 @@ creator:
   author:
     agent_name: Alcott, Louisa May
     aliases:
-    - Barnard, A. M.
     - Alcott, Louisa M. (Louisa May)
+    - Barnard, A. M.
     - Alcott, L. M. (Louisa May)
     birthdate: 1832
     deathdate: 1888
@@ -21,15 +21,15 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:Domestic fiction'
-- '!lcsh:Sisters -- Fiction'
-- '!lcsh:Young women -- Fiction'
-- '!lcsh:New England -- Fiction'
-- '!lcc:PS'
-- '!lcsh:Bildungsromans'
-- '!lcsh:Mothers and daughters -- Fiction'
-- '!lcsh:Family life -- New England -- Fiction'
 - '!lcsh:March family (Fictitious characters) -- Fiction'
+- '!lcsh:Bildungsromans'
 - '!lcsh:Autobiographical fiction'
+- '!lcsh:Family life -- New England -- Fiction'
+- '!lcsh:Sisters -- Fiction'
+- '!lcsh:Mothers and daughters -- Fiction'
+- '!lcsh:New England -- Fiction'
+- '!lcsh:Domestic fiction'
+- '!lcc:PS'
+- '!lcsh:Young women -- Fiction'
 title: Little Women
 url: http://www.gutenberg.org/ebooks/514
