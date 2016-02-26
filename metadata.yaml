@@ -1,5 +1,5 @@
 _repo: Little-Women_514
-_version: 0.0.2
+_version: 0.1.0
 covers:
 - attribution: Lia Marcoux, 2015
   cover_type: original
@@ -39,5 +39,6 @@ subjects:
 - '!lcc: PS'
 - '!lcsh: Autobiographical fiction'
 - '!lcsh: March family (Fictitious characters) -- Fiction'
+- GITenberg
 title: Little Women
 url: http://www.gutenberg.org/ebooks/514
