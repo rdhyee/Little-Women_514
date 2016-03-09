@@ -21,13 +21,15 @@ script:
 - /usr/bin/python asciidoctor-htmlbook/gitberg-machine/machine.py -o . -m metadata.yaml book.html
 - xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
 - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
-- cp cover.jpg OEBPS/cover.jpg
+- if [ -e cover.jpg ]; then cp cover.jpg OEBPS/cover.jpg; fi
 # look for first images directory and one found, copy over to ./OEBPS
 - find . -name images -type d | head -n 1 | xargs -I {} mv {} ./OEBPS/
 - zip -rX book.epub mimetype
 - zip -rX book.epub OEBPS/ META-INF/
 - if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi
 - mv book.epub Little-Women.epub
+- ebook-convert Little-Women.epub Little-Women.mobi
+- xvfb-run ebook-convert Little-Women.epub Little-Women.pdf
 branches:
   only:
   - master
@@ -43,10 +45,15 @@ deploy:
   provider: releases
   api_key:
     secure: k2R5Rmamc5Q2595xnd474dFMw1RrLzYRONeAQ9lP47hnox8B6JNLh5XhwJHnU1ZDf2E6lq8XStg26yeSZF2lL/pLPwnb/JDGjjDOogtqe74jLWC0ybChhrhbrW5Oqi6l4pvohatY/u7gLTIt3KgCzWspvwDECy3Htbrjy7TyHPqiy5Or6/Ra7l53jTxeONebCEkn8vKN6Xp3JmJYZEWIHYWxn4WNtC7RqFii/XYn/8Aii1X2wGcVXTu+Gou7g6sB0q/XwY7/IK6HDJuMUuiaQmuwguyHsDQR1+GdpGeCZmj1+va+qZXfCzr3DGCi9YWQgTBuwa5yCwBNaTIkHAIIxtAT/+MG2d1yfv27VqfA8i/6PdjYqv+pg2ws17kzgCgXCBdw8HfTPxvcn8cIrlyvA3L02punlFJtgbwD6+k8AZ4BYShCVCpogfsh0HDZfwp6JVmy6LRj4llPPAyuJ0pAgf4wkR0QGhuuSQ8p2ZOJ6X2pHzxUnlFU9wE306S+NtsdNmt2NmGSCmDFMkVv5ZigSmviqQWSjfawZC0Po1ehMPuqIeEElJ59MQim98jsDnII287ExQicuHwVQyDzug6sFgQFR4dsxzHMYcCLCyFNOzWXH2CmykTlZHGGgUXynolBkWBuDJZ9KI8ZNdymTLsRHJsa+gEFdJ79RGtV+pLmKQw=
-  file: Little-Women.epub
+  file:
+    - Little-Women.epub
+    - Little-Women.mobi
+    - Little-Women.pdf
   "on":
     repo: GITenberg/Little-Women_514
 addons:
   apt:
     packages:
     - xsltproc
+    - xvfb
+    - calibre
